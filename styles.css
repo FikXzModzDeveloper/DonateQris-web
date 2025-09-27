@@ -6,8 +6,7 @@
   --light: #f8fafc;
   --gray: #64748b;
   --gray-light: #e2e8f0;
-  /* BASE FONT 18px agar besar di HP */
-  font-size: 18px;
+  font-size: 16px;
 }
 * {
   box-sizing: border-box;
@@ -148,7 +147,6 @@ body {
   -webkit-tap-highlight-color: transparent;
   outline: none;
 }
-/* TABLET & LAPTOP */
 @media (min-width: 768px) {
   :root {
     font-size: 16px;
