@@ -12,8 +12,8 @@
   margin: 0;
   padding: 0;
 }
-html, body {
-  height: 100%;
+html {
+  font-size: 16px;
 }
 body {
   font-family: 'Poppins', sans-serif;
@@ -21,16 +21,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
   padding: 1rem;
+  -webkit-text-size-adjust: 100%;
 }
 .container {
   background: rgba(255,255,255,0.75);
   backdrop-filter: blur(10px);
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  width: 90%;
+  width: 90vw;
   max-width: 420px;
-  padding: 2rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.5s ease-out forwards;
@@ -46,34 +48,34 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
+  gap: clamp(0.5rem, 2vw, 0.75rem);
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
 }
 .logo-icon {
-  font-size: 1.75rem;
+  font-size: clamp(1.25rem, 5vw, 1.75rem);
   color: var(--primary);
 }
 .logo-text {
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 5vw, 1.5rem);
   font-weight: 600;
   color: var(--dark);
 }
 .form-group {
-  margin-bottom: 1.25rem;
+  margin-bottom: clamp(0.9rem, 3vw, 1.25rem);
 }
 .form-label {
   display: block;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  margin-bottom: clamp(0.3rem, 1.5vw, 0.5rem);
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
   color: var(--dark);
   font-weight: 500;
 }
 .form-control {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: clamp(0.6rem, 2.5vw, 0.75rem) clamp(0.8rem, 3vw, 1rem);
   border: 1px solid var(--gray-light);
   border-radius: 0.5rem;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 2.5vw, 0.95rem);
   transition: all 0.3s ease;
   -webkit-tap-highlight-color: transparent;
   outline: none;
@@ -84,9 +86,9 @@ body {
 }
 .btn {
   width: 100%;
-  padding: 0.75rem;
+  padding: clamp(0.6rem, 2.5vw, 0.75rem);
   border-radius: 0.5rem;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -94,7 +96,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: clamp(0.3rem, 1.5vw, 0.5rem);
   -webkit-tap-highlight-color: transparent;
   outline: none;
 }
@@ -107,57 +109,43 @@ body {
 }
 .qris-box {
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: clamp(1rem, 3vw, 1.5rem);
 }
 .qris-img {
-  max-width: 100%;
+  width: 100%;
   border-radius: 0.75rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .info-box {
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: clamp(0.8rem, 2.5vw, 1rem);
+  padding: clamp(0.8rem, 2.5vw, 1rem);
   background-color: var(--primary-light);
   border-radius: 0.5rem;
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 2.3vw, 0.9rem);
   color: var(--dark);
 }
 .footer {
-  margin-top: 2rem;
+  margin-top: clamp(1.25rem, 3.5vw, 2rem);
   text-align: center;
   color: var(--gray);
-  font-size: 0.85rem;
+  font-size: clamp(0.75rem, 2.3vw, 0.85rem);
 }
 .sound-btn {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: clamp(0.7rem, 2vw, 1rem);
+  left: clamp(0.7rem, 2vw, 1rem);
   background: rgba(255,255,255,0.4);
   border: none;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: clamp(28px, 7vw, 36px);
+  height: clamp(28px, 7vw, 36px);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   color: var(--dark);
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 3vw, 1rem);
   backdrop-filter: blur(4px);
   -webkit-tap-highlight-color: transparent;
   outline: none;
-}
-@media (max-width: 480px) {
-  .container {
-    width: 95%;
-    padding: 1.5rem;
-  }
-  .logo-text {
-    font-size: 1.25rem;
-  }
-  .sound-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 0.9rem;
-  }
 }
