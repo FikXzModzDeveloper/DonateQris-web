@@ -1,4 +1,4 @@
-const qrisUrls = "https://files.catbox.moe/b32b73.jpg";
+const qrisUrls = "https://files.catbox.moe/b32b73.jpg"; // gnti ke url qris lu
 const apiBase = "https://api.fikmydomainsz.xyz/tools/qrtodinamis?urlQris=";
 const infoApi = "https://api.fikmydomainsz.xyz/tools/infoqris?url=";
 
